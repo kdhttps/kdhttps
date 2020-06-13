@@ -11,13 +11,17 @@ import { Blog } from './blog';
 export class BlogsComponent implements OnInit {
   blogs: Blog[] = [];
 
-  constructor(public scully: ScullyRoutesService, private blogService: BlogService) { }
+  constructor(
+    public scully: ScullyRoutesService,
+    private blogService: BlogService,
+    ) { }
 
   ngOnInit(): void {
     this.blogService.getBlogs()
       .subscribe(data => {
-        debugger
         this.blogs = data.body;
+      }, error => {
+        console.log(error);
       });
   }
 }

@@ -1,1 +1,42 @@
-<p style="margin-top: 100px;">blogssssssssss works!</p>
+<section class="container-fluid mt-px-100">
+
+  <h2 class="h1-responsive font-weight-bold text-center my-5">#Blogs</h2>
+  <p class="text-center w-responsive mx-auto mb-5">#Learn with #fun. If you thing then you can make a new things. Let's started learning
+    <mdb-icon fab icon="stack-overflow" class="pr-2"></mdb-icon>.</p>
+
+  <div *ngFor="let blog of blogs; let i = index">
+    <div class="row">
+      <div class="col-lg-5">
+
+        <!-- Featured image -->
+        <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4 waves-light" mdbWavesEffect>
+          <img class="img-fluid" [src]="blog.seoMeta.image" [alt]="blog.seoMeta.title">
+          <a>
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+
+      </div>
+      <div class="col-lg-7">
+
+        <!-- Category -->
+        <a href="#!" class="green-text">
+          <h6 class="font-weight-bold-500 mb-3">
+            <mdb-icon fab icon="stack-overflow"></mdb-icon> {{blog.seoMeta.keywords}}
+          </h6>
+        </a>
+        <!-- Post title -->
+        <h3 class="font-weight-bold-500 mb-3"><strong>{{blog.title}}</strong></h3>
+        <!-- Excerpt -->
+        <p><strong>{{blog.seoMeta.description}}</strong></p>
+        <!-- Post data -->
+        <p>by <a><strong>@KDHTTPS</strong></a></p>
+        <p class="font-weight-bold-500">{{blog.updatedAt | date:'mediumDate'}}</p>
+        <!-- Read more button -->
+        <a mdbBtn color="success" mdbWavesEffect>Read more</a>
+
+      </div>
+    </div>
+    <hr class="my-5">
+  </div>
+</section>
