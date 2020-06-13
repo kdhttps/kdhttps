@@ -12,7 +12,10 @@ import { async } from '@angular/core/testing';
 })
 export class BlogComponent implements OnInit {
   blog: Blog = {} as Blog;
-  id: string = '';
+
+  id$ = this.route.params.pipe(
+    pluck('id')
+  );
 
   constructor(
     private route: ActivatedRoute,
@@ -20,16 +23,14 @@ export class BlogComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.route.queryParams.subscribe(params => {
-      this.id = params['id'];
+    this.id$.subscribe((id) => {
+      this.blogService.getBlog(id)
+        .subscribe(data => {
+          this.blog = data.body;
+        }, error => {
+          console.log(error);
+        });
     });
-
-    this.blogService.getBlog(this.id)
-      .subscribe(data => {
-        this.blog = data.body;
-      }, error => {
-        console.log(error);
-      });
   }
 
 }

@@ -7,7 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BlogService } from './blog.service';
 import { BlogsComponent } from './blogs.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-
+import { MarkdownModule } from 'ngx-markdown';
 
 @NgModule({
   declarations: [
@@ -19,6 +19,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     BlogRoutingModule,
     HttpClientModule,
     MDBBootstrapModule.forRoot(),
+    MarkdownModule.forRoot(),
   ],
   providers: [
     BlogService,
