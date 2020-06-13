@@ -7,8 +7,8 @@ export const config: ScullyConfig = {
     "/blog/:slug": {
       type: 'json',
       slug: {
-        url: 'https://jsonplaceholder.typicode.com/users',
-        property: 'id'
+        url: 'https://mean-star.herokuapp.com/blogs/publisher/5ec7cc7eee39a5001244805b',
+        property: 'title'
       }
     }
   }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { pluck } from "rxjs/operators";
+import { ScullyRoutesService } from '@scullyio/ng-lib';
+import { BlogService } from "./blog.service";
+import { Blog } from './blog';
 
 @Component({
   selector: 'app-blogs',
@@ -7,10 +9,15 @@ import { pluck } from "rxjs/operators";
   styleUrls: ['./blogs.component.scss']
 })
 export class BlogsComponent implements OnInit {
+  blogs: Blog[] = [];
 
-  constructor() { }
+  constructor(public scully: ScullyRoutesService, private blogService: BlogService) { }
 
   ngOnInit(): void {
+    this.blogService.getBlogs()
+      .subscribe(data => {
+        debugger
+        this.blogs = data.body;
+      });
   }
-
 }
