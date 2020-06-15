@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from '../../environments/environment';
+import { CustomMetaService } from '../meta.service';
 
 @Component({
   selector: 'app-home',
@@ -134,9 +135,11 @@ export class HomeComponent implements OnInit {
     description: 'Completed Bachelor of Computer Application from Dhansukhbhai Balabhai Patel (DRB) College, VNSGU University, Bharthana, Vesu.',
   }];
 
-  constructor() { }
+  constructor(private customMetaService: CustomMetaService) { }
 
   ngOnInit(): void {
+    const title = 'Kiran Mali | Full Stack Software Developer';
+    this.customMetaService.setTitle(title);
+    this.customMetaService.setSocialMediaTags('https://kdhttps.com', title, 'Love programming, Like to play with new ideas, to do new things, explaining things in a very easy way, simplify the work and love to help people .', environment.assetsURL + '/twitter-image.png');
   }
-
 }

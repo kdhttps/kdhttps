@@ -5,6 +5,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ScullyLibModule } from '@scullyio/ng-lib';
+import { CustomMetaService } from './meta.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
     MDBBootstrapModule.forRoot(),
     ScullyLibModule,
   ],
-  providers: [],
+  providers: [
+    CustomMetaService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -41,5 +41,6 @@ export class CustomMetaService {
         this.metaService.updateTag({ name: siteTag.name, content: siteTag.value });
       }
     });
+    this.metaService.updateTag({name: 'description', content: values.description});
   }
 }
