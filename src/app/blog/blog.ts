@@ -6,6 +6,7 @@ export interface Blog {
   publisher: {name: string, email: string};
   likes: [string];
   publishedAt: Date;
+  updatedAt: Date;
   seoMeta: {
     image: string,
     url: string,

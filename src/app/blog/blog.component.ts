@@ -3,7 +3,6 @@ import { ActivatedRoute } from '@angular/router';
 import { pluck } from "rxjs/operators";
 import { BlogService } from './blog.service';
 import { Blog } from './blog';
-import { async } from '@angular/core/testing';
 
 @Component({
   selector: 'app-blog',
