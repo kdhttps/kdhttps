@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  assetsURL: 'https://raw.githubusercontent.com/kdhttps/generator/master/src/assets',
+  assetsURL: 'https://raw.githubusercontent.com/kdhttps/generator/master/assets',
   blogsUrl: 'https://mean-star.herokuapp.com/blogs',
 };
 

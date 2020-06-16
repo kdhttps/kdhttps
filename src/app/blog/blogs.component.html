@@ -30,10 +30,10 @@
         <!-- Excerpt -->
         <p><strong>{{blog.seoMeta.description}}</strong></p>
         <!-- Post data -->
-        <p>by <a><strong>@KDHTTPS</strong></a></p>
+        <p>by <a href="https://twitter.com/kdhttps" target="_blank" rel="noopener noreferrer"><strong>@KDHTTPS</strong></a></p>
         <p class="font-weight-bold-500">{{blog.updatedAt | date:'mediumDate'}}</p>
         <!-- Read more button -->
-        <a mdbBtn color="success" mdbWavesEffect>Read more</a>
+        <a routerLink="/blog/{{blog._id}}/{{blog.title}}" mdbBtn color="success" mdbWavesEffect>Read more</a>
 
       </div>
     </div>

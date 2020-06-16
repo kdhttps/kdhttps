@@ -24,9 +24,8 @@ export class CustomMetaService {
       url: url,
       title: title,
       description: description,
-      image: `https://kdhttps.github.io/assets/${image}`
+      image: image
     }
-    const imageUrl: string = `assets/${image}`;
     const tags: Array<MetaTag> = [];
     this.SITES.forEach((s) => {
       this.METAS.forEach((m) => {
