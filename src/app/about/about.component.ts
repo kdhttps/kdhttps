@@ -3,11 +3,11 @@ import { environment } from '../../environments/environment';
 import { CustomMetaService } from '../meta.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-about',
+  templateUrl: './about.component.html',
+  styleUrls: ['./about.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class AboutComponent implements OnInit {
   assetsURL = environment.assetsURL;
 
   experience = [{

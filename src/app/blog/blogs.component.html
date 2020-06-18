@@ -1,8 +1,9 @@
 <section class="container-fluid mt-px-100">
 
-  <h2 class="h1-responsive font-weight-bold text-center my-5">#Blogs</h2>
-  <p class="text-center w-responsive mx-auto mb-5">#Learn with #fun. If you thing then you can make a new things. Let's started learning.
-    <mdb-icon fab icon="stack-overflow" class="pr-2"></mdb-icon>.</p>
+  <h4 class="h4-responsive font-weight-bold text-center w-responsive mx-auto mb-5">
+    If you <span class="green-text">#think</span> then you can make a new <span class="green-text">#things</span>&nbsp;
+    <mdb-icon fab icon="stack-overflow" class="pr-2"></mdb-icon>
+  </h4>
 
   <div *ngFor="let blog of blogs; let i = index">
     <div class="row">
@@ -11,7 +12,7 @@
         <!-- Featured image -->
         <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4 waves-light" mdbWavesEffect>
           <img class="img-fluid" [src]="blog.seoMeta.image" [alt]="blog.seoMeta.title">
-          <a routerLink="/blog/{{blog._id}}/{{blog.title}}">
+          <a routerLink="/{{blog._id}}/{{blog.title}}">
             <div class="mask rgba-white-slight"></div>
           </a>
         </div>
@@ -30,10 +31,11 @@
         <!-- Excerpt -->
         <p><strong>{{blog.seoMeta.description}}</strong></p>
         <!-- Post data -->
-        <p>by <a href="https://twitter.com/kdhttps" target="_blank" rel="noopener noreferrer"><strong>@KDHTTPS</strong></a></p>
+        <p>by <a href="https://twitter.com/kdhttps" target="_blank"
+            rel="noopener noreferrer"><strong>@KDHTTPS</strong></a></p>
         <p class="font-weight-bold-500">{{blog.updatedAt | date:'mediumDate'}}</p>
         <!-- Read more button -->
-        <a routerLink="/blog/{{blog._id}}/{{blog.title}}" mdbBtn color="success" mdbWavesEffect>Read more</a>
+        <a routerLink="/{{blog._id}}/{{blog.title}}" mdbBtn color="success" mdbWavesEffect>Read more</a>
 
       </div>
     </div>
