@@ -1,9 +1,20 @@
-<section class="container-fluid mt-px-100">
-
-  <h4 class="h4-responsive font-weight-bold text-center w-responsive mx-auto mb-5">
-    If you <span class="green-text">#think</span> then you can make a new <span class="green-text">#things</span>&nbsp;
-    <mdb-icon fab icon="stack-overflow" class="pr-2"></mdb-icon>
-  </h4>
+<div class="view view-blog-banner">
+  <div class="">
+    <div class="mask rgba-stylish-strong flex-center">
+      <div class="container text-center white-text">
+        <div class="white-text text-center wow fadeInUp">
+          <h3 class="h3-responsive font-weight-bold-500 mt-px-30">
+            If you #think
+            <mdb-icon fas icon="lightbulb" size="1x" class="amber-text" aria-hidden="true"></mdb-icon>
+            then you can make a new #things
+            <mdb-icon fab icon="stack-overflow" size="1x" class="blue-text" aria-hidden="true"></mdb-icon>
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="container-fluid mt-px-30">
 
   <div *ngFor="let blog of blogs; let i = index">
     <div class="row">
