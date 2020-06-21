@@ -35,12 +35,13 @@
               "node_modules/angular-bootstrap-md/assets/scss/bootstrap/bootstrap.scss",
               "node_modules/angular-bootstrap-md/assets/scss/mdb.scss",
               "src/styles.scss",
-              "node_modules/prismjs/themes/prism.css"
+              "node_modules/prismjs/themes/prism-twilight.css"
             ],
             "scripts": [
               "node_modules/marked/lib/marked.js",
               "node_modules/prismjs/prism.js",
-              "node_modules/prismjs/components/prism-javascript.min.js"
+              "node_modules/prismjs/components/prism-javascript.min.js",
+              "node_modules/emoji-toolkit/lib/js/joypixels.min.js"
             ]
           },
           "configurations": {

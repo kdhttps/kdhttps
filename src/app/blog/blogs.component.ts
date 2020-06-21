@@ -20,7 +20,7 @@ export class BlogsComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    const title = 'Blogs | @kdhttps';
+    const title = 'Blogs | Kiran Mali @kdhttps | Full Stack Software Developer';
     this.customMetaService.setTitle(title);
     this.customMetaService.setSocialMediaTags('https://kdhttps.com', title, '#Learn with #fun. If you thing then you can make a new things. Let\'s started learning.', environment.assetsURL + '/blogs-banner.png');
 
