@@ -6,12 +6,14 @@
     </mdb-navbar-brand>
     <links>
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item waves-light" mdbWavesEffect routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <li class="nav-item waves-light" mdbWavesEffect routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact: true}">
           <a class="nav-link" routerLink="/">
             Home <span class="sr-only">(current)</span>
           </a>
         </li>
-        <li class="nav-item waves-light" mdbWavesEffect routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <li class="nav-item waves-light" mdbWavesEffect routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact: true}">
           <a class="nav-link" routerLink="/about">
             About <span class="sr-only">(current)</span>
           </a>
@@ -56,3 +58,23 @@
     <a href="https://kdhttps.com"> https://kdhttps.com</a>
   </div>
 </footer>
+
+<div mdbModal #basicModal="mdbModal" class="modal fade bottom" tabindex="-1" role="dialog"
+  aria-labelledby="myBasicModalLabel" aria-hidden="true" [config]="{backdrop: false, ignoreBackdropClick: true}">
+  <div class="modal-dialog modal-frame modal-bottom" role="document">
+    <!--Content-->
+    <div class="modal-content rgba-black-strong text-white">
+      <!--Body-->
+      <div class="modal-body">
+        <div class="row d-flex justify-content-center align-items-center">
+          <p class="pt-3 pr-2">
+            This website uses cookies to ensure you get the best experience on our website.
+          </p>
+          <button type="button" mdbBtn color="dark" mdbWavesEffect (click)="denyCookie()">Decline</button>
+          <button type="button" mdbBtn color="warning" mdbWavesEffect data-dismiss="modal" (click)="setGACookies()">Allow Cookies</button>
+        </div>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
