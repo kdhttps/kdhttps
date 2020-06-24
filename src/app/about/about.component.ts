@@ -138,7 +138,7 @@ export class AboutComponent implements OnInit {
   constructor(private customMetaService: CustomMetaService) { }
 
   ngOnInit(): void {
-    const title = 'Kiran Mali | Full Stack Software Developer';
+    const title = 'Kiran Mali | Full Stack Software Developer | kdhttps.com';
     this.customMetaService.setTitle(title);
     this.customMetaService.setSocialMediaTags('https://kdhttps.com', title, 'Love programming, Like to play with new ideas, to do new things, explaining things in a very easy way, simplify the work and love to help people .', environment.assetsURL + '/twitter-image.png');
   }

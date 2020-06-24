@@ -32,7 +32,7 @@ export class BlogComponent implements OnInit {
           const { image, description, url } = this.blog.seoMeta;
           const title = this.blog.title;
           
-          this.customMetaService.setTitle(title + ' | @kdhttps');
+          this.customMetaService.setTitle(title + ' | kdhttps.com');
           this.customMetaService.setSocialMediaTags(url, title, description, image);
         }, error => {
           console.log(error);
