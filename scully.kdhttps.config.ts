@@ -4,12 +4,8 @@ export const config: ScullyConfig = {
   projectName: "kdhttps",
   outDir: './dist/static',
   routes: {
-    "/blog/:id/:slug": {
+    "/blog/:slug": {
       type: 'json',
-      id: {
-        url: 'https://mean-star.herokuapp.com/blogs/publisher/5ec7cc7eee39a5001244805b',
-        property: '_id'
-      },
       slug: {
         url: 'https://mean-star.herokuapp.com/blogs/publisher/5ec7cc7eee39a5001244805b',
         property: 'title'

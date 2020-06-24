@@ -15,7 +15,7 @@ export class BlogService {
     return this.http.get<Blog[]>(environment.blogsUrl + '/publisher/5ec7cc7eee39a5001244805b', { observe: 'response' });
   }
 
-  getBlog(id: string): Observable<HttpResponse<Blog>> {
-    return this.http.get<Blog>(environment.blogsUrl + '/ls/' + id, { observe: 'response' });
+  getBlog(title: string): Observable<HttpResponse<Blog>> {
+    return this.http.get<Blog>(environment.blogsUrl + '/ls/title/' + title, { observe: 'response' });
   }
 }

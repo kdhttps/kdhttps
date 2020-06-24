@@ -29,7 +29,7 @@
         <!-- Featured image -->
         <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4 waves-light" mdbWavesEffect>
           <img class="img-fluid" [src]="blog.seoMeta.image" [alt]="blog.seoMeta.title">
-          <a routerLink="/blog/{{blog._id}}/{{blog.title}}">
+          <a routerLink="/blog/{{blog.title}}">
             <div class="mask rgba-white-slight"></div>
           </a>
         </div>
@@ -52,7 +52,7 @@
             rel="noopener noreferrer"><strong>@KDHTTPS</strong></a></p>
         <p class="font-weight-bold-500">{{blog.updatedAt | date:'mediumDate'}}</p>
         <!-- Read more button -->
-        <a routerLink="/blog/{{blog._id}}/{{blog.title}}" mdbBtn color="success" mdbWavesEffect>Read more</a>
+        <a routerLink="/blog/{{blog.title}}" mdbBtn color="success" mdbWavesEffect>Read more</a>
 
       </div>
     </div>

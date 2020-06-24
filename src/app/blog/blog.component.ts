@@ -14,8 +14,8 @@ import { environment } from 'src/environments/environment';
 export class BlogComponent implements OnInit {
   blog: Blog = {} as Blog;
 
-  id$ = this.route.params.pipe(
-    pluck('id')
+  slug$ = this.route.params.pipe(
+    pluck('slug')
   );
 
   constructor(
@@ -25,8 +25,8 @@ export class BlogComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.id$.subscribe((id) => {
-      this.blogService.getBlog(id)
+    this.slug$.subscribe((slug) => {
+      this.blogService.getBlog(slug)
         .subscribe(data => {
           this.blog = data.body;
           const { image, description, url } = this.blog.seoMeta;
