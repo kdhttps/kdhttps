@@ -8,7 +8,7 @@ export const config: ScullyConfig = {
       type: 'json',
       slug: {
         url: 'https://mean-star.herokuapp.com/blogs/publisher/5ec7cc7eee39a5001244805b',
-        property: 'title'
+        property: 'lowerTitle'
       },
     }
   }
