@@ -28,9 +28,10 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    if (!this.getCookie('cookieconsent')) {
-      this.basicModal.show();
-    }
+    // if (!this.getCookie('cookieconsent')) {
+    //   this.basicModal.show();
+    // }
+    this.setGACookies()
   }
 
   setGACookies() {
@@ -45,7 +46,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
     // set custom cookie
     this.setCookie('cookieconsent', 'allow', 1);
-    this.basicModal.hide();
+    // this.basicModal.hide();
   };
 
   private setCookie(name, value, days) {
